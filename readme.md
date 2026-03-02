@@ -1,0 +1,123 @@
+📊 Portfolio Risk Analytics & Investment Dashboard
+A full-stack financial analytics platform for portfolio risk measurement, optimization, and interactive visualization.
+This system integrates historical market data storage, quantitative risk modeling, portfolio optimization, and a modern dashboard interface.
+
+🚀 Overview
+This project allows users to:
+Store and manage historical stock data
+Construct weighted investment portfolios
+Compute return and risk metrics
+Optimize portfolio allocation
+Visualize analytics through an interactive dashboard
+The system combines Data Science, Backend Engineering, Database Design, and Frontend Development into a single production-style architecture.
+
+🏗 System Architecture
+Frontend (React)
+        ↓
+Backend API (FastAPI)
+        ↓
+Analytics Engine (NumPy / SciPy)
+        ↓
+PostgreSQL Database
+
+🛠 Tech Stack
+Data & Analytics
+NumPy
+pandas
+SciPy
+Matplotlib
+Backend
+API
+SQL
+Frontend
+React
+
+📂 Database Schema
+stocks
+Column	Description
+id	Primary Key
+ticker	Stock symbol
+company_name	Company name
+prices
+Column	Description
+id	Primary Key
+stock_id	Foreign Key
+date	Trading date
+adj_close	Adjusted closing price
+portfolio
+Column	Description
+id	Primary Key
+stock_id	Foreign Key
+weight	Allocation weight
+Indexes are applied on (stock_id, date) for optimized retrieval.
+
+📈 Core Features
+1️⃣ Data Processing
+Missing value handling
+Daily return computation
+Covariance and correlation matrix generation
+
+2️⃣ Portfolio Metrics
+Expected Return​​
+
+3️⃣ Risk Analytics
+Value at Risk (VaR)
+Conditional VaR (CVaR)
+Rolling volatility
+Correlation analysis
+
+4️⃣ Portfolio Optimization
+Sharpe ratio maximization
+Minimum variance portfolio
+Efficient Frontier generation
+Constrained optimization using SLSQP
+
+5️⃣ Algorithmic Components (DSA)
+Sliding Window (Rolling volatility)
+Graph traversal (DFS/BFS for correlated stock clustering)
+Heap / Priority Queue (Top-N volatile stocks)
+Dynamic Programming (Constrained portfolio allocation)
+
+🔌 REST API Endpoints
+Method	Endpoint	Description
+GET	/stocks	List all stocks
+GET	/prices/{ticker}	Historical prices
+POST	/portfolio/metrics	Portfolio return & risk
+GET	/efficient-frontier	Optimized portfolios
+GET	/risk-metrics	VaR, CVaR, statistics
+
+Example response:
+
+{
+  "expected_return": 0.18,
+  "volatility": 0.22,
+  "sharpe_ratio": 0.72
+}
+
+
+📊 Dashboard Features
+Portfolio allocation pie chart
+Stock price time-series chart
+Efficient frontier visualization
+Risk tolerance slider
+Real-time performance metrics
+
+📌 Key Learning Outcomes
+Financial risk modeling
+Quantitative portfolio optimization
+SQL performance optimization
+REST API design
+Full-stack integration
+Applied Data Structures & Algorithms
+
+🚀 Future Improvements
+Real-time data streaming
+Monte Carlo simulation
+Factor-based risk models
+Authentication & multi-user portfolios
+Docker-based deployment
+
+
+📄 License
+
+This project is intended for educational and portfolio purposes.
