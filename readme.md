@@ -1,4 +1,4 @@
-📊 Portfolio Risk Analytics & Investment Dashboard
+<h1>📊 Portfolio Risk Analytics & Investment Dashboard</h1>
 A full-stack financial analytics platform for portfolio risk measurement, optimization, and interactive visualization.
 This system integrates historical market data storage, quantitative risk modeling, portfolio optimization, and a modern dashboard interface.
 
